@@ -1,0 +1,23 @@
+[package]
+name = "renderrelay"
+version = "0.0.1"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+description = "Render Relay Protocol (RRP) — server-rendered streaming to TVs and displays"
+repository = "https://github.com/renderrelay/sdk-rust"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+tungstenite = { version = "0.26", optional = true }
+
+[features]
+viewer = []
+renderer = []
+client = ["dep:tungstenite"]
+server = ["dep:tungstenite"]
+
+[lints.clippy]
+pedantic = { level = "warn", priority = -1 }
+module_name_repetitions = "allow"
