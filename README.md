@@ -61,7 +61,7 @@ loop {
 
 ```toml
 [dependencies]
-renderrelay = { version = "0.0.1", features = ["server"] }
+renderrelay = { version = "0.1", features = ["server"] }
 ```
 
 ### Viewer (connecting to a renderer)
@@ -86,7 +86,7 @@ client.send(&RrpMessage::key("ok", renderrelay::KeyState::Down))?;
 
 ```toml
 [dependencies]
-renderrelay = { version = "0.0.1", features = ["client"] }
+renderrelay = { version = "0.1", features = ["client"] }
 ```
 
 ### Messages only (no WebSocket)
